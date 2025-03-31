@@ -4,35 +4,35 @@ import { Star } from 'lucide-react';
 
 const testimonials = [
   {
-    quote: "ViralBoost completely transformed our marketing approach. Within just 2 months, our customer acquisition cost dropped by 40% while conversions doubled.",
-    author: "Sarah Johnson",
-    position: "Marketing Director",
-    company: "TechNova Inc.",
-    avatar: "https://randomuser.me/api/portraits/women/1.jpg",
+    quote: "SalesBang revolutionized our customer acquisition strategy. Our referral rate increased by 320% in just 3 months, and our CAC dropped by 40%.",
+    author: "Michael Chen",
+    position: "CMO",
+    company: "TechGrowth Solutions",
+    avatar: "https://randomuser.me/api/portraits/men/32.jpg",
     stars: 5
   },
   {
-    quote: "The referral system is simply brilliant. Our customers are now our best marketers, and the viral campaigns feature made our product launch a huge success.",
-    author: "David Chen",
-    position: "CEO",
-    company: "Startup Foundry",
-    avatar: "https://randomuser.me/api/portraits/men/2.jpg",
-    stars: 5
-  },
-  {
-    quote: "I was skeptical at first, but the results speak for themselves. Our social media engagement has increased by 300% and sales are up 70% quarter-over-quarter.",
-    author: "Michelle Rodriguez",
-    position: "E-commerce Manager",
+    quote: "The viral campaigns feature is incredible. We launched our product and reached 5x our expected sales targets because our customers became our marketers.",
+    author: "Sophia Rodriguez",
+    position: "E-commerce Director",
     company: "Urban Styles",
-    avatar: "https://randomuser.me/api/portraits/women/3.jpg",
+    avatar: "https://randomuser.me/api/portraits/women/44.jpg",
     stars: 5
   },
   {
-    quote: "The analytics dashboard gives us insights we never had before. We can now see exactly what drives our viral growth and optimize accordingly.",
+    quote: "As a fintech company, trust is everything. SalesBang helped us leverage our existing customers to bring in qualified leads that converted at 3x our normal rate.",
     author: "James Wilson",
     position: "Growth Lead",
-    company: "DataPoint Solutions",
-    avatar: "https://randomuser.me/api/portraits/men/4.jpg",
+    company: "FinSecure",
+    avatar: "https://randomuser.me/api/portraits/men/62.jpg",
+    stars: 5
+  },
+  {
+    quote: "The analytics dashboard gives us insights we never had before. We can finally see the exact ROI of our referral marketing and optimize accordingly.",
+    author: "Emily Johnson",
+    position: "Digital Marketing Manager",
+    company: "RetailNova",
+    avatar: "https://randomuser.me/api/portraits/women/28.jpg",
     stars: 4
   }
 ];
@@ -42,8 +42,8 @@ const TestimonialsSection = () => {
     <section id="testimonials" className="py-20 px-4 md:px-8 lg:px-16 bg-white">
       <div className="container mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-viral-black mb-4">Loved by <span className="text-viral-purple">Growing Businesses</span></h2>
-          <p className="text-gray-600 max-w-2xl mx-auto">Don't just take our word for it. Here's what our customers have to say about their experience with ViralBoost.</p>
+          <h2 className="text-3xl md:text-4xl font-bold text-viral-black mb-4">Trusted by <span className="text-viral-purple">Industry Leaders</span></h2>
+          <p className="text-gray-600 max-w-2xl mx-auto">See what our customers have to say about how SalesBang transformed their business growth.</p>
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -83,7 +83,7 @@ const TestimonialsSection = () => {
             ))}
           </div>
           <p className="text-2xl font-bold text-viral-black mb-2">4.9 out of 5 stars</p>
-          <p className="text-gray-600">from over 500+ reviews</p>
+          <p className="text-gray-600">from over 800+ verified reviews</p>
         </div>
       </div>
     </section>

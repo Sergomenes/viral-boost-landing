@@ -15,15 +15,17 @@ const Navbar = () => {
       <div className="container mx-auto flex justify-between items-center">
         <div className="flex items-center">
           <a href="#" className="flex items-center">
-            <span className="text-viral-purple font-bold text-2xl">Viral<span className="text-viral-black">Boost</span></span>
+            <span className="text-viral-purple font-bold text-2xl">Sales<span className="text-viral-black">Bang</span></span>
           </a>
         </div>
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center space-x-8">
           <a href="#features" className="text-viral-black hover:text-viral-purple transition-colors">Features</a>
+          <a href="#benefits" className="text-viral-black hover:text-viral-purple transition-colors">Benefits</a>
+          <a href="#use-cases" className="text-viral-black hover:text-viral-purple transition-colors">Use Cases</a>
+          <a href="#how-it-works" className="text-viral-black hover:text-viral-purple transition-colors">How It Works</a>
           <a href="#testimonials" className="text-viral-black hover:text-viral-purple transition-colors">Testimonials</a>
-          <a href="#pricing" className="text-viral-black hover:text-viral-purple transition-colors">Pricing</a>
           <a href="#faq" className="text-viral-black hover:text-viral-purple transition-colors">FAQ</a>
           <Button className="bg-viral-purple hover:bg-viral-dark-purple text-white">Get Started</Button>
         </div>
@@ -51,18 +53,32 @@ const Navbar = () => {
               Features
             </a>
             <a 
+              href="#benefits" 
+              className="text-viral-black hover:text-viral-purple transition-colors py-2"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Benefits
+            </a>
+            <a 
+              href="#use-cases" 
+              className="text-viral-black hover:text-viral-purple transition-colors py-2"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Use Cases
+            </a>
+            <a 
+              href="#how-it-works" 
+              className="text-viral-black hover:text-viral-purple transition-colors py-2"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              How It Works
+            </a>
+            <a 
               href="#testimonials" 
               className="text-viral-black hover:text-viral-purple transition-colors py-2"
               onClick={() => setIsMenuOpen(false)}
             >
               Testimonials
-            </a>
-            <a 
-              href="#pricing" 
-              className="text-viral-black hover:text-viral-purple transition-colors py-2"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Pricing
             </a>
             <a 
               href="#faq" 
