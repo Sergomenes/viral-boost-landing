@@ -10,10 +10,10 @@ const HeroSection = () => {
         <div className="flex flex-col lg:flex-row items-center">
           <div className="lg:w-1/2 mb-12 lg:mb-0 animate-fade-in">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-viral-black mb-6 leading-tight">
-              Boost Your Sales with <span className="text-viral-purple">SalesBang</span>
+              SalesBang: <span className="text-viral-purple">A Viral Sales Platform</span>
             </h1>
             <p className="text-lg md:text-xl text-gray-600 mb-8 max-w-xl">
-              Transform your customers into your most effective marketers with our innovative viral marketing platform. Drive sales, increase engagement, and create a community around your brand.
+              The best marketing is your customer's recommendation. The best salesperson is your customer! Utilize the potential of your customers for viral marketing and sales growth.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Button className="bg-viral-purple hover:bg-viral-dark-purple text-white px-8 py-6 text-lg rounded-lg flex items-center gap-2 shadow-lg shadow-viral-purple/30">
@@ -28,7 +28,7 @@ const HeroSection = () => {
                 <div className="bg-viral-light-purple rounded-full p-2">
                   <TrendingUp className="h-5 w-5 text-viral-purple" />
                 </div>
-                <p className="text-sm text-gray-600"><span className="font-semibold">4.2x</span> Average Growth Rate</p>
+                <p className="text-sm text-gray-600"><span className="font-semibold">250%</span> Monthly Growth</p>
               </div>
               <div className="flex items-center gap-2">
                 <div className="bg-viral-light-purple rounded-full p-2">
@@ -40,7 +40,7 @@ const HeroSection = () => {
                 <div className="bg-viral-light-purple rounded-full p-2">
                   <BarChart className="h-5 w-5 text-viral-purple" />
                 </div>
-                <p className="text-sm text-gray-600"><span className="font-semibold">45%</span> Conversion Increase</p>
+                <p className="text-sm text-gray-600"><span className="font-semibold">4x</span> Repeat Purchases</p>
               </div>
             </div>
           </div>
@@ -56,12 +56,12 @@ const HeroSection = () => {
                     className="w-full h-full object-cover"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent p-6 flex flex-col justify-end">
-                    <p className="text-white text-lg font-medium">Track your viral campaigns in real-time</p>
+                    <p className="text-white text-lg font-medium">Achieve viral sales growth without advertising</p>
                     <div className="mt-2 flex items-center">
                       <div className="h-2 w-full bg-white/20 rounded-full overflow-hidden">
                         <div className="h-full w-3/4 bg-white rounded-full"></div>
                       </div>
-                      <span className="text-white text-sm ml-2">75%</span>
+                      <span className="text-white text-sm ml-2">250%</span>
                     </div>
                   </div>
                 </div>

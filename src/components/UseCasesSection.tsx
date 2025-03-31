@@ -7,41 +7,41 @@ const useCases = [
   {
     icon: <ShoppingBag className="h-12 w-12 text-viral-purple mb-6" />,
     title: "Online Stores",
-    description: "E-commerce businesses use SalesBang to turn customers into brand advocates. Reward shoppers for referring friends, sharing purchases on social media, and writing reviews. Our clients see an average 35% increase in repeat purchases and a 28% boost in new customer acquisition.",
+    description: "E-commerce businesses use SalesBang to turn filled but unpaid shopping carts into completed sales. By offering Credits for viral tasks, stores motivate customers to complete purchases and return for more, increasing repeat purchases by 3-4x.",
     features: [
-      "Post-purchase referral campaigns",
-      "Social sharing incentives",
-      "Reviews and UGC rewards",
-      "Customer loyalty programs",
-      "Cart abandonment recovery"
+      "Conversion of abandoned carts",
+      "Customer-generated product reviews",
+      "Social media content from real users",
+      "Increased repeat purchase rate",
+      "Authentic word-of-mouth marketing"
     ],
-    cta: "Perfect for Shopify, WooCommerce, and Magento stores"
+    cta: "Ideal for any e-commerce business looking to boost sales"
   },
   {
     icon: <BriefcaseBusiness className="h-12 w-12 text-viral-purple mb-6" />,
     title: "Fintech & Banks",
-    description: "Financial institutions leverage SalesBang to acquire new customers at a fraction of traditional acquisition costs. Our secure, compliant platform helps banks and fintech companies create referral programs that drive growth while maintaining regulatory compliance.",
+    description: "Financial institutions leverage SalesBang to acquire new customers at a fraction of traditional costs. Our platform helps create authentic testimonials and reviews that build trust in an industry where credibility is essential.",
     features: [
-      "Secure, compliant referral systems",
-      "Account opening incentives",
-      "Financial product recommendations",
-      "App download and usage campaigns",
-      "KYC-friendly verification"
+      "Trust-building testimonials",
+      "Reduced customer acquisition costs",
+      "Increased app downloads and usage",
+      "User-generated content for financial products",
+      "Higher conversion rates for financial services"
     ],
-    cta: "Trusted by leading banks and financial services"
+    cta: "Trusted by financial services looking for authentic growth"
   },
   {
     icon: <Code className="h-12 w-12 text-viral-purple mb-6" />,
     title: "IT Companies",
-    description: "Software and technology companies use SalesBang to accelerate user acquisition and product adoption. From SaaS platforms to mobile apps, our tools help tech companies leverage word-of-mouth at scale with measurable results.",
+    description: "Software and technology companies use SalesBang to accelerate user acquisition and product adoption. By incentivizing current users to create tutorials, reviews, and social media content, IT companies build credibility and drive organic growth.",
     features: [
-      "In-app referral mechanisms",
-      "Freemium to premium conversions",
-      "Beta testing recruitment",
-      "Feature adoption incentives",
-      "Developer community building"
+      "User-generated tutorials and guides",
+      "Authentic software reviews",
+      "Technical content from real users",
+      "Community building and engagement",
+      "Viral product demonstrations"
     ],
-    cta: "Powering growth for startups and enterprises alike"
+    cta: "Perfect for SaaS, apps, and technology products"
   }
 ];
 
@@ -67,7 +67,7 @@ const UseCasesSection = () => {
                 <h3 className="text-2xl font-semibold text-viral-black mb-4 text-center">{useCase.title}</h3>
                 <p className="text-gray-600 mb-6">{useCase.description}</p>
                 <div className="mb-6">
-                  <h4 className="font-semibold text-viral-black mb-3">Key Features:</h4>
+                  <h4 className="font-semibold text-viral-black mb-3">Key Benefits:</h4>
                   <ul className="space-y-2">
                     {useCase.features.map((feature, fIndex) => (
                       <li key={fIndex} className="flex items-start">
@@ -89,7 +89,7 @@ const UseCasesSection = () => {
         </div>
 
         <div className="mt-16 text-center">
-          <p className="text-gray-600 mb-4">Don't see your industry? We work with businesses of all types.</p>
+          <p className="text-gray-600 mb-4">Don't see your industry? SalesBang works for businesses of all types.</p>
           <a href="#contact" className="text-viral-purple font-medium hover:underline">Contact us for a custom solution</a>
         </div>
       </div>

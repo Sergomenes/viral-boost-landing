@@ -5,42 +5,42 @@ import {
   Users, 
   LineChart, 
   Share2, 
-  Shield, 
-  Code,
   Target,
-  Zap 
+  Zap,
+  Star,
+  Award 
 } from 'lucide-react';
 
 const features = [
   {
     icon: <Rocket className="h-8 w-8 text-viral-purple" />,
-    title: 'Viral Campaigns',
-    description: 'Create campaigns that spread exponentially through your existing customer base, turning satisfied customers into brand advocates.'
+    title: 'Viral Marketing Tasks',
+    description: 'Create a pool of viral promotional tasks for your customers based on ready-made templates or custom campaigns to promote your business.'
   },
   {
     icon: <Users className="h-8 w-8 text-viral-purple" />,
-    title: 'Customer Engagement',
-    description: 'Build deeper relationships with your customers through personalized interactions and referral incentives.'
+    title: 'Customer Ambassadors',
+    description: 'Turn all your customers into ambassadors, promoters, and salespeople who actively promote your products and services.'
   },
   {
-    icon: <LineChart className="h-8 w-8 text-viral-purple" />,
-    title: 'Advanced Analytics',
-    description: 'Track performance metrics with comprehensive analytics showing real-time campaign results and ROI calculations.'
+    icon: <Star className="h-8 w-8 text-viral-purple" />,
+    title: 'Virtual Currency Rewards',
+    description: 'Reward your clients with virtual currency (Credits) for completing viral tasks, which they can use for purchases.'
   },
   {
     icon: <Share2 className="h-8 w-8 text-viral-purple" />,
-    title: 'Social Sharing',
-    description: 'Leverage the power of social media with seamless integration across all major platforms to maximize your reach.'
+    title: 'Content Generation',
+    description: 'Customers create and publish valuable content about your company or product on various platforms, boosting your online presence.'
   },
   {
     icon: <Target className="h-8 w-8 text-viral-purple" />,
-    title: 'Targeted Campaigns',
-    description: 'Create custom audiences and segments to ensure your campaigns reach the right people at the right time.'
+    title: 'Immediate Rewards',
+    description: 'Customers receive rewards immediately after task completion, providing instant gratification and encouraging participation.'
   },
   {
-    icon: <Zap className="h-8 w-8 text-viral-purple" />,
-    title: 'Quick Integration',
-    description: 'Easy API integration with your existing tech stack, CRM systems, and e-commerce platforms for seamless workflow.'
+    icon: <Award className="h-8 w-8 text-viral-purple" />,
+    title: 'Special Benefits',
+    description: 'Create exclusive offers that customers can purchase only with Credits, increasing loyalty and retention.'
   }
 ];
 
@@ -49,8 +49,8 @@ const FeaturesSection = () => {
     <section id="features" className="py-20 px-4 md:px-8 lg:px-16 bg-viral-gray">
       <div className="container mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-viral-black mb-4">Powerful Features to <span className="text-viral-purple">Grow Your Business</span></h2>
-          <p className="text-gray-600 max-w-2xl mx-auto">SalesBang comes loaded with tools designed to make your products and services go viral, increasing reach and sales exponentially.</p>
+          <h2 className="text-3xl md:text-4xl font-bold text-viral-black mb-4">How Can You Achieve <span className="text-viral-purple">250% Monthly Growth</span> Without Advertising?</h2>
+          <p className="text-gray-600 max-w-2xl mx-auto">SalesBang provides powerful tools to leverage your customers as your most effective marketing force, driving exponential growth.</p>
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -71,8 +71,8 @@ const FeaturesSection = () => {
         <div className="mt-20 bg-gradient-to-r from-viral-purple to-viral-dark-purple rounded-2xl p-10 text-white">
           <div className="flex flex-col md:flex-row items-center justify-between">
             <div className="md:w-2/3 mb-6 md:mb-0">
-              <h3 className="text-2xl md:text-3xl font-bold mb-4">Ready to experience viral growth?</h3>
-              <p className="text-white/80">Join thousands of businesses already using SalesBang to boost their sales and customer engagement.</p>
+              <h3 className="text-2xl md:text-3xl font-bold mb-4">Ready to harness your customers' potential?</h3>
+              <p className="text-white/80">Join businesses already using SalesBang to boost sales by 250% monthly without additional advertising costs.</p>
             </div>
             <a 
               href="#" 

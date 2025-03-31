@@ -17,31 +17,31 @@ const BenefitsSection = () => {
             <ul className="space-y-4">
               <li className="flex items-start">
                 <Check className="h-5 w-5 text-green-500 mr-3 mt-0.5" />
-                <span className="text-gray-700">Leverages your existing customer base</span>
+                <span className="text-gray-700">Immediate rewards for customers</span>
               </li>
               <li className="flex items-start">
                 <Check className="h-5 w-5 text-green-500 mr-3 mt-0.5" />
-                <span className="text-gray-700">Builds brand advocacy and loyalty</span>
+                <span className="text-gray-700">Clear task instructions for customers</span>
               </li>
               <li className="flex items-start">
                 <Check className="h-5 w-5 text-green-500 mr-3 mt-0.5" />
-                <span className="text-gray-700">Natural, word-of-mouth promotion</span>
+                <span className="text-gray-700">Authentic content that doesn't get flagged</span>
               </li>
               <li className="flex items-start">
                 <Check className="h-5 w-5 text-green-500 mr-3 mt-0.5" />
-                <span className="text-gray-700">Higher trust and conversion rates</span>
+                <span className="text-gray-700">3-4x increase in repeat purchases</span>
               </li>
               <li className="flex items-start">
                 <Check className="h-5 w-5 text-green-500 mr-3 mt-0.5" />
-                <span className="text-gray-700">Lower customer acquisition costs</span>
+                <span className="text-gray-700">Free customer-generated marketing</span>
               </li>
               <li className="flex items-start">
                 <Check className="h-5 w-5 text-green-500 mr-3 mt-0.5" />
-                <span className="text-gray-700">Scalable exponential growth</span>
+                <span className="text-gray-700">Improved SEO through genuine mentions</span>
               </li>
               <li className="flex items-start">
                 <Check className="h-5 w-5 text-green-500 mr-3 mt-0.5" />
-                <span className="text-gray-700">Detailed analytics and insights</span>
+                <span className="text-gray-700">Virtual currency builds customer loyalty</span>
               </li>
             </ul>
           </div>
@@ -51,31 +51,31 @@ const BenefitsSection = () => {
             <ul className="space-y-4">
               <li className="flex items-start">
                 <Check className="h-5 w-5 text-green-500 mr-3 mt-0.5" />
-                <span className="text-gray-700">Professional marketers promotion</span>
-              </li>
-              <li className="flex items-start">
-                <Check className="h-5 w-5 text-green-500 mr-3 mt-0.5" />
                 <span className="text-gray-700">Commission-based structure</span>
               </li>
               <li className="flex items-start">
-                <X className="h-5 w-5 text-red-500 mr-3 mt-0.5" />
-                <span className="text-gray-500">Often lacks genuine recommendations</span>
+                <Check className="h-5 w-5 text-green-500 mr-3 mt-0.5" />
+                <span className="text-gray-700">External promoters involved</span>
               </li>
               <li className="flex items-start">
                 <X className="h-5 w-5 text-red-500 mr-3 mt-0.5" />
-                <span className="text-gray-500">Limited community building</span>
+                <span className="text-gray-500">Rewards delayed and unpredictable</span>
               </li>
               <li className="flex items-start">
                 <X className="h-5 w-5 text-red-500 mr-3 mt-0.5" />
-                <span className="text-gray-500">Higher costs with variable results</span>
+                <span className="text-gray-500">Many sites prohibit referral links</span>
               </li>
               <li className="flex items-start">
                 <X className="h-5 w-5 text-red-500 mr-3 mt-0.5" />
-                <span className="text-gray-500">Linear growth model</span>
+                <span className="text-gray-500">Referrals lack marketing expertise</span>
               </li>
               <li className="flex items-start">
                 <X className="h-5 w-5 text-red-500 mr-3 mt-0.5" />
-                <span className="text-gray-500">Less targeted audience reach</span>
+                <span className="text-gray-500">Low participation rate</span>
+              </li>
+              <li className="flex items-start">
+                <X className="h-5 w-5 text-red-500 mr-3 mt-0.5" />
+                <span className="text-gray-500">No customer loyalty mechanism</span>
               </li>
             </ul>
           </div>
@@ -89,27 +89,27 @@ const BenefitsSection = () => {
               </li>
               <li className="flex items-start">
                 <Check className="h-5 w-5 text-green-500 mr-3 mt-0.5" />
-                <span className="text-gray-700">Brand awareness building</span>
+                <span className="text-gray-700">Professional content creation</span>
               </li>
               <li className="flex items-start">
                 <X className="h-5 w-5 text-red-500 mr-3 mt-0.5" />
-                <span className="text-gray-500">Decreasing effectiveness (ad blindness)</span>
+                <span className="text-gray-500">High cost of advertising</span>
               </li>
               <li className="flex items-start">
                 <X className="h-5 w-5 text-red-500 mr-3 mt-0.5" />
-                <span className="text-gray-500">Highest customer acquisition cost</span>
+                <span className="text-gray-500">Low user trust in ads</span>
               </li>
               <li className="flex items-start">
                 <X className="h-5 w-5 text-red-500 mr-3 mt-0.5" />
-                <span className="text-gray-500">Limited trust and engagement</span>
+                <span className="text-gray-500">Poor conversion rates</span>
               </li>
               <li className="flex items-start">
                 <X className="h-5 w-5 text-red-500 mr-3 mt-0.5" />
-                <span className="text-gray-500">No community or loyalty building</span>
+                <span className="text-gray-500">High cost per acquisition</span>
               </li>
               <li className="flex items-start">
                 <X className="h-5 w-5 text-red-500 mr-3 mt-0.5" />
-                <span className="text-gray-500">Difficult to measure true ROI</span>
+                <span className="text-gray-500">No mechanism for repeat purchases</span>
               </li>
             </ul>
           </div>
