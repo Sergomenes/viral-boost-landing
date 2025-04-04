@@ -8,39 +8,54 @@ const painPoints = [
     problems: [
       "High cost of direct advertising",
       "Low user trust in direct advertising",
-      "Low conversion rate of ad impressions into clicks to your website",
-      "As a consequence, the high cost of attracting a new customer"
+      "Low conversion rate of ad impressions into conversions to your website",
+      "Consequently, high cost of attracting a new customer"
     ],
-    solution: "Your customers will regularly publish the content you want in the form and on the platforms where you want. Free of charge for you! Come up with marketing assignments for your customers, or use the many ready-made viral templates from SalesBang, and offer them to your customers."
+    solution: [
+      "Your customers themselves regularly create and publish the content you want, in the form and on the platforms you want, on a regular basis. At no cost to you!",
+      "Come up with marketing assignments for your clients, or use the many ready-made viral templates from SalesBang. Offer them to all of your clients."
+    ]
   },
   {
-    title: "Standard affiliate and referral programs are not effective",
+    title: "Standard affiliate and referral programs don't work",
     problems: [
-      "Many sites prohibit referral links, consider them toxic, and remove referral content",
-      "In standard referral programs, the partner's reward for his efforts and actions is postponed indefinitely and unpredictable, so his motivation tends to zero",
-      "Your referrals usually have no marketing expertise and don't know where, how and what to publish, so it's profitable for both them and you",
-      "As a consequence, your users are not interested in participating in standard affiliate programs, and you lose their potential"
+      "Many sites prohibit the use of referral links, consider them toxic and remove referral content",
+      "In a standard referral program, an affiliate's reward for their efforts and actions is deferred and unpredictable, so their motivation tends to zero",
+      "More often than not, the referral has no expertise and doesn't know where, how, or what to publish so that it's profitable for both him and you",
+      "As a consequence, your users are not interested in participating in standard affiliate programs and you lose their potential"
     ],
-    solution: "Your client is rewarded for the fulfillment of your viral assignment immediately after its execution. Your client has clear instructions for each viral task - how to make content about you, where and how to publish it."
+    solution: [
+      "In addition to referral links, SalesBang enables your referrals to use \"referral nicknames\" when publishing affiliate content, indistinguishable from a regular username, which eliminates the deletion or pessimization of their publications",
+      "Your client is rewarded for the performance of your viral assignment instantly upon execution and quality check",
+      "Your client has a detailed and clear instruction for each task - how to make content about you, where and how to publish it"
+    ]
   },
   {
-    title: "SEO is expensive, time-consuming, and unpredictable",
+    title: "SEO promotion is expensive, time-consuming, and unpredictable",
     problems: [
-      "The position of your site in organic search depends on the number of mentions and links to your site on external resources. Buying them is expensive, difficult, and ineffective",
-      "Links mass and mentions on the Internet about your business should be constantly replenished. This can only be done by a lot of users and only on a regular basis",
+      "Your site's position in organic search depends on the number of mentions and links to your site on external resources. Buying them is expensive and not effective",
+      "Link mass and mentions of your business should be constantly replenished and grow, this can only do a lot of users and only on a regular basis",
       "Search engines regularly change the rules of prioritization in search engine results, the only constant ranking factor is the number of mentions of your brand/product and the number of external links to your site",
       "As a consequence, it is almost impossible to get organic search traffic without multiple \"white\" mentions of your website or brand on the internet"
     ],
-    solution: "You provide all your customers with a convenient tool to regularly publish positive reviews, recommendations, articles, and videos about your company or product. As a result, you get direct traffic of new clients from the flow of viral publications, \"white\" SEO and growth of organic search traffic by improving the position of the site in search engines."
+    solution: [
+      "You provide all your customers with a convenient and clear tool to regularly publish positive reviews, recommendations, articles, videos about your company or product",
+      "You get exponentially growing direct traffic of new customers from a stream of viral publications from your old and new customers",
+      "You get an increase in search traffic by improving your site's position in search engines due to the growing number of mentions"
+    ]
   },
   {
-    title: "Low conversion of users into purchases, low share of repeat purchases",
+    title: "Low user-to-purchase conversion, low repeat purchase rate",
     problems: [
-      "The customer's decision to pay for the first purchase is the most difficult stage in your sales funnel. Filled and unpaid \"shopping carts\" are a real pain for any online store",
-      "Once a user has made a purchase, there is almost nothing to motivate him to come back to you again. He has no \"asset\" left on your site that he would be sorry to lose",
-      "Competition in your market niche is high, and the ease of your customer switching to a competitor drastically reduces their lifecycle and likelihood of a repeat purchase"
+      "A customer's decision to pay for their first purchase is the most difficult step in your sales funnel. Refilled, unpaid and abandoned \"shopping carts\" are the pain of any online retailer",
+      "Once a purchase is made, there is almost nothing to keep users in your marketplace, or motivate them to come back to you again. They have no \"asset\" left on your marketplace that he would be sorry to lose",
+      "Competition in your marketplace niche is high, and the ease of your customer switching to a competitor drastically reduces customer loyalty, customer lifecycle, and likelihood of repeat purchase"
     ],
-    solution: "Your customers get a special virtual currency that they can spend on partial payment for only your products and services. On which ones, you decide for yourself. This is an \"asset\" that binds the client to your site, and an effective tool that increases the statistics of repeat purchases by 3-4 times."
+    solution: [
+      "Your customers get a special virtual currency \"Credits\", which they get for performing your viral tasks, and can spend on partial or full payment for your products and services only",
+      "The range and conditions of receiving \"benefits\" for your \"viral sellers\" you determine yourself, forming their motivation to continue promoting your site or your products",
+      "\"Credits\" is an asset that binds the client to your site for a long time, and an effective tool that increases the statistics of his repeat purchases by 3-4 times"
+    ]
   }
 ];
 
@@ -79,7 +94,11 @@ const PainPointsSection = () => {
                     <CheckCircle className="h-6 w-6 text-green-500 mr-3 flex-shrink-0 mt-1" />
                     <h4 className="font-semibold text-lg text-viral-black">SalesBang Solution:</h4>
                   </div>
-                  <p className="ml-9 text-gray-700">{point.solution}</p>
+                  <ul className="ml-9 space-y-2">
+                    {point.solution.map((solutionItem, idx) => (
+                      <li key={idx} className="text-gray-700 list-disc">{solutionItem}</li>
+                    ))}
+                  </ul>
                 </div>
               </div>
             </div>
