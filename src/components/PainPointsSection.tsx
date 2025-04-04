@@ -9,14 +9,17 @@ const painPoints = [
     title: "Expensive advertising and high cost of leads",
     icon: <DollarSign className="h-10 w-10 text-amber-500" />,
     problems: [
-      "High cost of direct advertising",
-      "Low user trust in direct advertising",
-      "Low conversion rate of ad impressions into conversions to your website",
-      "Consequently, high cost of attracting a new customer"
+      "High cost of direct advertising across digital marketing channels continues to increase year after year, pushing many businesses to seek alternatives",
+      "Low user trust in direct advertising due to market saturation and increasing ad-fatigue among potential customers",
+      "Extremely low conversion rate of ad impressions into conversions to your website, with industry averages often below 2%",
+      "Digital advertising platforms offering diminishing returns on investment as competition for ad space intensifies",
+      "Consequently, sky-high cost of attracting a new customer, which often exceeds the initial profit from their first purchase"
     ],
     solution: [
       "Your customers themselves regularly create and publish the content you want, in the form and on the platforms you want, on a regular basis. At no cost to you!",
-      "Come up with marketing assignments for your clients, or use the many ready-made viral templates from SalesBang. Offer them to all of your clients."
+      "Come up with marketing assignments for your clients, or use the many ready-made viral templates from SalesBang. Offer them to all of your clients.",
+      "Transform your existing customer base into an army of content creators who genuinely promote your products and services to their networks",
+      "Eliminate dependency on expensive advertising platforms while building authentic brand advocacy"
     ]
   },
   {
