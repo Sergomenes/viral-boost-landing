@@ -1,8 +1,13 @@
 
-import React from 'react';
-import { AlertTriangle, CheckCircle, Shield, DollarSign, Search, ShoppingCart } from 'lucide-react';
+import React, { useState } from 'react';
+import { AlertTriangle, CheckCircle, Shield, DollarSign, Search, ShoppingCart, ChevronDown } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import {
+  Collapsible,
+  CollapsibleContent,
+  CollapsibleTrigger,
+} from "@/components/ui/collapsible";
 
 const painPoints = [
   {
@@ -69,6 +74,25 @@ const painPoints = [
 ];
 
 const PainPointsSection = () => {
+  // Track which problem sections are open
+  const [openProblems, setOpenProblems] = useState<Record<number, boolean>>({});
+  // Track which solution sections are open
+  const [openSolutions, setOpenSolutions] = useState<Record<number, boolean>>({});
+
+  const toggleProblem = (index: number) => {
+    setOpenProblems(prev => ({
+      ...prev,
+      [index]: !prev[index]
+    }));
+  };
+
+  const toggleSolution = (index: number) => {
+    setOpenSolutions(prev => ({
+      ...prev,
+      [index]: !prev[index]
+    }));
+  };
+
   return (
     <section className="py-20 px-4 md:px-8 lg:px-16 bg-gradient-to-b from-viral-gray to-white">
       <div className="container mx-auto">
@@ -96,35 +120,75 @@ const PainPointsSection = () => {
               </CardHeader>
               <CardContent className="p-6">
                 <div className="grid grid-cols-1 gap-6">
-                  <div className="space-y-3">
-                    <div className="flex items-start">
-                      <AlertTriangle className="h-5 w-5 text-amber-500 mr-2 flex-shrink-0 mt-0.5" />
-                      <h4 className="font-semibold text-viral-black">The Problem:</h4>
+                  {/* Problems Accordion */}
+                  <Collapsible
+                    open={openProblems[index]}
+                    onOpenChange={() => toggleProblem(index)}
+                    className="space-y-2"
+                  >
+                    <div className="flex items-center justify-between">
+                      <div className="flex items-center">
+                        <AlertTriangle className="h-5 w-5 text-amber-500 mr-2 flex-shrink-0" />
+                        <h4 className="font-semibold text-viral-black">The Problem:</h4>
+                      </div>
+                      <CollapsibleTrigger className="rounded-full w-8 h-8 inline-flex items-center justify-center hover:bg-viral-purple/10 transition-colors">
+                        <ChevronDown className={`h-5 w-5 transition-transform duration-200 ${openProblems[index] ? 'rotate-180' : ''}`} />
+                      </CollapsibleTrigger>
                     </div>
-                    <ul className="ml-7 space-y-1.5">
-                      {point.problems.map((problem, idx) => (
-                        <li key={idx} className="text-gray-700 text-sm leading-relaxed flex items-start">
-                          <span className="inline-block w-2 h-2 rounded-full bg-amber-400 mt-1.5 mr-2 flex-shrink-0"></span>
-                          <span>{problem}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
+                    
+                    <div className="pl-7 space-y-0.5">
+                      {/* Always show the first problem point */}
+                      <div className="text-gray-700 text-sm leading-relaxed flex items-start">
+                        <span className="inline-block w-2 h-2 rounded-full bg-amber-400 mt-1.5 mr-2 flex-shrink-0"></span>
+                        <span>{point.problems[0]}</span>
+                      </div>
+                      
+                      {/* Show remaining problem points when expanded */}
+                      <CollapsibleContent className="space-y-1.5 mt-1.5">
+                        {point.problems.slice(1).map((problem, idx) => (
+                          <div key={idx} className="text-gray-700 text-sm leading-relaxed flex items-start">
+                            <span className="inline-block w-2 h-2 rounded-full bg-amber-400 mt-1.5 mr-2 flex-shrink-0"></span>
+                            <span>{problem}</span>
+                          </div>
+                        ))}
+                      </CollapsibleContent>
+                    </div>
+                  </Collapsible>
                   
-                  <div className="space-y-3 bg-viral-light-purple/30 p-4 rounded-lg">
-                    <div className="flex items-start">
-                      <CheckCircle className="h-5 w-5 text-viral-purple mr-2 flex-shrink-0 mt-0.5" />
-                      <h4 className="font-semibold text-viral-black">SalesBang Solution:</h4>
+                  {/* Solutions Accordion */}
+                  <Collapsible
+                    open={openSolutions[index]}
+                    onOpenChange={() => toggleSolution(index)}
+                    className="space-y-2 bg-viral-light-purple/30 p-4 rounded-lg"
+                  >
+                    <div className="flex items-center justify-between">
+                      <div className="flex items-center">
+                        <CheckCircle className="h-5 w-5 text-viral-purple mr-2 flex-shrink-0" />
+                        <h4 className="font-semibold text-viral-black">SalesBang Solution:</h4>
+                      </div>
+                      <CollapsibleTrigger className="rounded-full w-8 h-8 inline-flex items-center justify-center hover:bg-viral-purple/20 transition-colors">
+                        <ChevronDown className={`h-5 w-5 transition-transform duration-200 ${openSolutions[index] ? 'rotate-180' : ''}`} />
+                      </CollapsibleTrigger>
                     </div>
-                    <ul className="ml-7 space-y-2">
-                      {point.solution.map((solutionItem, idx) => (
-                        <li key={idx} className="text-gray-700 text-sm leading-relaxed flex items-start">
-                          <span className="inline-block w-2 h-2 rounded-full bg-viral-purple mt-1.5 mr-2 flex-shrink-0"></span>
-                          <span>{solutionItem}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
+                    
+                    <div className="pl-7 space-y-0.5">
+                      {/* Always show the first solution point */}
+                      <div className="text-gray-700 text-sm leading-relaxed flex items-start">
+                        <span className="inline-block w-2 h-2 rounded-full bg-viral-purple mt-1.5 mr-2 flex-shrink-0"></span>
+                        <span>{point.solution[0]}</span>
+                      </div>
+                      
+                      {/* Show remaining solution points when expanded */}
+                      <CollapsibleContent className="space-y-1.5 mt-1.5">
+                        {point.solution.slice(1).map((solution, idx) => (
+                          <div key={idx} className="text-gray-700 text-sm leading-relaxed flex items-start">
+                            <span className="inline-block w-2 h-2 rounded-full bg-viral-purple mt-1.5 mr-2 flex-shrink-0"></span>
+                            <span>{solution}</span>
+                          </div>
+                        ))}
+                      </CollapsibleContent>
+                    </div>
+                  </Collapsible>
                 </div>
               </CardContent>
             </Card>
