@@ -1,10 +1,13 @@
 
 import React from 'react';
-import { AlertTriangle, CheckCircle } from 'lucide-react';
+import { AlertTriangle, CheckCircle, Shield, DollarSign, Search, ShoppingCart } from 'lucide-react';
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 
 const painPoints = [
   {
     title: "Expensive advertising and high cost of leads",
+    icon: <DollarSign className="h-10 w-10 text-amber-500" />,
     problems: [
       "High cost of direct advertising",
       "Low user trust in direct advertising",
@@ -18,6 +21,7 @@ const painPoints = [
   },
   {
     title: "Standard affiliate and referral programs don't work",
+    icon: <Shield className="h-10 w-10 text-amber-500" />,
     problems: [
       "Many sites prohibit the use of referral links, consider them toxic and remove referral content",
       "In a standard referral program, an affiliate's reward for their efforts and actions is deferred and unpredictable, so their motivation tends to zero",
@@ -32,6 +36,7 @@ const painPoints = [
   },
   {
     title: "SEO promotion is expensive, time-consuming, and unpredictable",
+    icon: <Search className="h-10 w-10 text-amber-500" />,
     problems: [
       "Your site's position in organic search depends on the number of mentions and links to your site on external resources. Buying them is expensive and not effective",
       "Link mass and mentions of your business should be constantly replenished and grow, this can only do a lot of users and only on a regular basis",
@@ -46,6 +51,7 @@ const painPoints = [
   },
   {
     title: "Low user-to-purchase conversion, low repeat purchase rate",
+    icon: <ShoppingCart className="h-10 w-10 text-amber-500" />,
     problems: [
       "A customer's decision to pay for their first purchase is the most difficult step in your sales funnel. Refilled, unpaid and abandoned \"shopping carts\" are the pain of any online retailer",
       "Once a purchase is made, there is almost nothing to keep users in your marketplace, or motivate them to come back to you again. They have no \"asset\" left on your marketplace that he would be sorry to lose",
@@ -61,48 +67,71 @@ const painPoints = [
 
 const PainPointsSection = () => {
   return (
-    <section className="py-20 px-4 md:px-8 lg:px-16 bg-viral-gray">
+    <section className="py-20 px-4 md:px-8 lg:px-16 bg-gradient-to-b from-viral-gray to-white">
       <div className="container mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-viral-black mb-4">How SalesBang <span className="text-viral-purple">Solves Your Key Problems</span> of Delivering Sales Growth</h2>
-          <p className="text-gray-600 max-w-2xl mx-auto">SalesBang tackles the most challenging obstacles to sustainable sales growth with innovative solutions.</p>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+            How SalesBang <span className="text-viral-purple">Solves Your Key Problems</span>
+          </h2>
+          <p className="text-gray-600 max-w-2xl mx-auto">
+            SalesBang tackles the most challenging obstacles to sustainable sales growth with innovative solutions.
+          </p>
         </div>
 
-        <div className="space-y-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {painPoints.map((point, index) => (
-            <div key={index} className="bg-white p-8 rounded-xl shadow-sm border border-gray-100">
-              <h3 className="text-xl font-semibold text-viral-black mb-4 flex items-center">
-                <span className="bg-viral-purple text-white rounded-full w-8 h-8 flex items-center justify-center mr-3">{index + 1}</span>
-                {point.title}
-              </h3>
-              
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-                <div className="space-y-3">
-                  <div className="flex items-start">
-                    <AlertTriangle className="h-6 w-6 text-amber-500 mr-3 flex-shrink-0 mt-1" />
-                    <h4 className="font-semibold text-lg text-viral-black">The Problems:</h4>
+            <Card key={index} className="overflow-hidden border-0 shadow-lg hover:shadow-xl transition-shadow duration-300">
+              <CardHeader className="bg-gradient-to-r from-viral-purple/10 to-viral-purple/5 pb-4">
+                <div className="flex items-center gap-4">
+                  <div className="flex items-center justify-center w-16 h-16 rounded-full bg-white shadow-md">
+                    {point.icon}
                   </div>
-                  <ul className="ml-9 space-y-2">
-                    {point.problems.map((problem, idx) => (
-                      <li key={idx} className="text-gray-700 list-disc">{problem}</li>
-                    ))}
-                  </ul>
+                  <CardTitle className="text-xl text-viral-black">
+                    {point.title}
+                  </CardTitle>
                 </div>
-                
-                <div className="space-y-3">
-                  <div className="flex items-start">
-                    <CheckCircle className="h-6 w-6 text-green-500 mr-3 flex-shrink-0 mt-1" />
-                    <h4 className="font-semibold text-lg text-viral-black">SalesBang Solution:</h4>
+              </CardHeader>
+              <CardContent className="p-6">
+                <div className="grid grid-cols-1 gap-6">
+                  <div className="space-y-3">
+                    <div className="flex items-start">
+                      <AlertTriangle className="h-5 w-5 text-amber-500 mr-2 flex-shrink-0 mt-0.5" />
+                      <h4 className="font-semibold text-viral-black">The Problem:</h4>
+                    </div>
+                    <ul className="ml-7 space-y-1.5">
+                      {point.problems.map((problem, idx) => (
+                        <li key={idx} className="text-gray-700 text-sm leading-relaxed flex items-start">
+                          <span className="inline-block w-2 h-2 rounded-full bg-amber-400 mt-1.5 mr-2 flex-shrink-0"></span>
+                          <span>{problem}</span>
+                        </li>
+                      ))}
+                    </ul>
                   </div>
-                  <ul className="ml-9 space-y-2">
-                    {point.solution.map((solutionItem, idx) => (
-                      <li key={idx} className="text-gray-700 list-disc">{solutionItem}</li>
-                    ))}
-                  </ul>
+                  
+                  <div className="space-y-3 bg-viral-light-purple/30 p-4 rounded-lg">
+                    <div className="flex items-start">
+                      <CheckCircle className="h-5 w-5 text-viral-purple mr-2 flex-shrink-0 mt-0.5" />
+                      <h4 className="font-semibold text-viral-black">SalesBang Solution:</h4>
+                    </div>
+                    <ul className="ml-7 space-y-2">
+                      {point.solution.map((solutionItem, idx) => (
+                        <li key={idx} className="text-gray-700 text-sm leading-relaxed flex items-start">
+                          <span className="inline-block w-2 h-2 rounded-full bg-viral-purple mt-1.5 mr-2 flex-shrink-0"></span>
+                          <span>{solutionItem}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
                 </div>
-              </div>
-            </div>
+              </CardContent>
+            </Card>
           ))}
+        </div>
+        
+        <div className="mt-16 text-center">
+          <Button className="bg-viral-purple hover:bg-viral-dark-purple text-white px-8 py-6 rounded-lg text-lg shadow-lg hover:shadow-xl transition-all">
+            Start Solving These Problems Today
+          </Button>
         </div>
       </div>
     </section>
